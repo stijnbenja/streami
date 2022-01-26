@@ -75,5 +75,9 @@ def return_order_dict(orderId):
 
 def append_order(orderId):
     global orders
-    orders.append(return_order_dict(orderId))
+    order_dict = return_order_dict(orderId)
+    if len(order_dict['items'])!=0:
+        orders.append(return_order_dict(orderId))
+    else:
+        pass
     
