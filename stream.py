@@ -93,7 +93,7 @@ if st.session_state['logged_in']:
         try:
             st.session_state['df'] = show.orders_to_df(st.session_state['orders'])
         except:
-            st.subheader('Je bent helemaal up-to-date! :)')
+            st.subheader('Ik ben aan het programmeren')
             st.caption('Vandaar de error hieronder')
             
         st.session_state['df_pak'] = show.orders_to_paklijst(st.session_state['orders'])
