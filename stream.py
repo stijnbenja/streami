@@ -48,10 +48,17 @@ if st.session_state['logged_in'] == False:
         st.write('Succesfully logged in!')        
 
 # BODY -----------------------------------------------------------------------------------
+#def append_order(orderId):
+#    global orders
+#    orders.append(get.return_order_dict(orderId))
+
 def append_order(orderId):
     global orders
-    orders.append(get.return_order_dict(orderId))
-
+    order_dict = get.return_order_dict(orderId)
+    if len(order_dict['items'])!=0:
+        orders.append(order_dict)
+    else:
+        pass
 
 if st.session_state['logged_in']:
      
