@@ -1,3 +1,0 @@
-reportlab
-xlsxwriter
-PyPDF2

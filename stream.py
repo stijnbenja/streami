@@ -67,9 +67,6 @@ if st.session_state['logged_in']:
 
     if button_order_download:
         
-        
-
-        
         # Get order id's of open orders
         get.update_bearer(pub,priv)
         orderId_list = get.get_all_orders_ids()
@@ -100,7 +97,7 @@ if st.session_state['logged_in']:
         try:
             st.session_state['df'] = show.orders_to_df(st.session_state['orders'])
         except:
-            st.subheader('Ik ben aan het programmeren')
+            st.subheader('Je bent helemaal up-to-date! :)')
             st.caption('Vandaar de error hieronder')
             
         st.session_state['df_pak'] = show.orders_to_paklijst(st.session_state['orders'])
